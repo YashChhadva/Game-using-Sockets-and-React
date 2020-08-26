@@ -1,0 +1,76 @@
+.game-container{
+    width: 500px;
+    height: 500px;
+    /* background-color: crimson; */
+    display: flex;
+    /* opacity : 20%; */
+    flex-wrap: wrap;
+    margin : 20px;
+
+}
+
+
+.actor , .actress , .movie , .song {
+    width: 45%;
+    height : 45%;
+    /* background-color: white; */
+    margin : 10px;
+    /* border-radius: 50%; */
+    position: relative;
+}
+
+.actor,.actress,.song,.movie{
+	/* position: relative; */
+	-moz-box-shadow: 0 0 5px 5px #30331B;
+	-webkit-box-shadow: 0 0 5px 5px #30331B;
+	box-shadow: 0 0 5px 5px #30331B;
+	border-radius: 100%;
+}
+
+.actress{
+	-moz-box-shadow: 0 0 5px 5px #A19C5D;
+	-webkit-box-shadow: 0 0 5px 5px #A19C5D;
+	box-shadow: 0 0 5px 5px #A19C5D;
+}
+
+.actor{
+	-moz-box-shadow: 0 0 5px 5px #807644;
+	-webkit-box-shadow: 0 0 5px 5px #807644;
+	box-shadow: 0 0 5px 5px #807644;
+}
+
+.song{
+	-moz-box-shadow: 0 0 5px 5px #827245;
+	-webkit-box-shadow: 0 0 5px 5px #827245;
+	box-shadow: 0 0 5px 5px #827245;
+}
+
+h4{
+    position: absolute;
+    /* display: flex; */
+    width: 100%;
+	top: 50%;
+    left: 50%;
+    margin:0;
+	transform: translate(-50%,-50%);
+    font-size: 100px;
+    color: #8A473E;
+    /* flex-wrap: wrap; */
+    /* text-overflow: hidden; */
+    text-align: center;
+}
+
+.small{
+    font-size: 40px;
+    /* text-overflow: clip; */
+}
+
+.buttonstyle{
+    font-size: 1.5rem;
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: crimson;
+    color:white;
+    border:none;
+}
