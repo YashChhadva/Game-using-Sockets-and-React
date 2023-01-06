@@ -23,7 +23,24 @@ mongoose
     })
     .then(() => console.log('DB Connected'));
 
-app.use(cors());
+const whitelist = ['https://bollywood-game-sockets.onrender.com'];
+const corsOptions = {
+  credentials: true, // This is important.
+  origin: (origin, callback) => {
+    if(whitelist.includes(origin))
+      return callback(null, true)
+
+      callback(new Error('Not allowed by CORS'));
+  }
+}
+app.use(cors(corsOptions));
+
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "https://bollywood-game-sockets.onrender.com");
+  res.header('Access-Control-Allow-Credentials', true);
+  next();
+});
+
 app.use(router);
 
 io.on('connect', (socket) => {
