@@ -22,7 +22,7 @@ const Chat = ({ location }) => {
   const [movie , setMovie] = useState('A');
   const [song , setSong] = useState('A');
   const [messages, setMessages] = useState([]);
-  const ENDPOINT = 'localhost:5000';
+  const ENDPOINT = 'https://bollywood-game-server.onrender.com';
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
