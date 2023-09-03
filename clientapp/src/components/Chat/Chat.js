@@ -23,7 +23,7 @@ const Chat = ({ location }) => {
   const [song , setSong] = useState('A');
   const [messages, setMessages] = useState([]);
   const ENDPOINT = 'https://bollywood-game-server.onrender.com/';
-  welcome_message = "Welcome to the game! This is similar to hangman game except that you have to be a bollywood buff to be good at this. All the circles are hints. Top right circle is the actor name. Top right is the actress name. Bottom left is the movie name. If you find it difficult to guess the names, then you can find it in the developer settings. Sorry for the trouble"
+  const welcome_message = "Welcome to the game! This is similar to hangman game except that you have to be a bollywood buff to be good at this. All the circles are hints. Top right circle is the actor name. Top right is the actress name. Bottom left is the movie name. If you find it difficult to guess the names, then you can find it in the developer settings. Sorry for the trouble"
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
