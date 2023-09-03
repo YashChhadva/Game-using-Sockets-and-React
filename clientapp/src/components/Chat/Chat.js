@@ -42,6 +42,10 @@ const Chat = ({ location }) => {
       }
     });
   }, [ENDPOINT, location.search]);
+
+  useEffect(()=>{
+    alert("Please wait for a few seconds. Sometimes it takes time for the server to be back up.")
+  },[location.search])
   
   useEffect(() => {
     socket.on('message', message => {
